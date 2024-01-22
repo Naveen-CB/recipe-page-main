@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'outfit';
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: 'YoungSerif';
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  font-style: normal;
+}
+:root{
+  /* primary */
+  --Nutmeg: hsl(14, 45%, 36%);;
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  /* neutrals */
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+*, *::after *::before{
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+img, canvas, video, svg, picture{
+  display: block;
+  max-width: 100%;
+}
+button, select, textarea, input {
+  font: inherit;
+}
+body{
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  
+  background-color: var(--Eggshell);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+article{
+  background-color: var(--White);
+  padding: 2rem;
+  max-width: calc(735px - 4rem);
+  display: grid;
+  gap: 2rem;
+  border-radius: 1rem;
+  margin: 7.7rem 0;
+}
+.page__content, main, .head__content{
+  display: grid;
+  gap: 1.5rem
+}
+.head__content{
+  margin-top: 2rem;
+}
+
+@media (max-width: 400px) {
+  
+    article{
+      padding: 0;
+    }
+    .head__content, .page__content{
+      padding: 0 2rem;
+    }
+    .page__content{
+      margin-bottom: 2rem;
+    }
+    
+    
+}
+@media (min-width: 450px) {
+  .omelette{
+    border-radius: 1rem;
+  }
+}
+li,  h2, h3{
+  color: var(--Nutmeg);
+}
+h2, h3{
+  font-weight: 600;
+}
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+h1, h2, h3{
+  font-family: 'YoungSerif', sans-serif;
+}
+p{
+  font-family: 'outfit', sans-serif;
+  color: var(--Wenge-Brown)
+}
+strong, h1{
+  color: var(--Dark-Charcoal);
+}
+.nutrition__span, h3{
+  color: var(--Dark-Raspberry);
+  font-weight: 700;
+}
+.nutrition__span{
+  display: flex;
+  justify-content: left;
+}
+.prep-time{
+  display: block;
+  background-color: var(--Eggshell);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 1px var(--Rose-White);
+}
+.head__h1{
+  font-size: 2rem;
+}
+.p__list{
+  margin-left: 1.5rem;
+}
+
+p{
+  margin: auto;
+}
+.ingredients__ul, ol{
+  padding: 1rem 0 2rem 1.2rem;
+  border-bottom: 1px solid var(--Light-Grey);
+  display: grid;
+  gap: .45rem;
+}
+.time__ul{
+  padding-top: 1.3rem;
+  display: grid;
+  gap: .4rem;
+}
+.p__list{
+  display: inline;
+}
+ul{
+  list-style-position: inside;
+}
+.gridy{
+  display: flex;
+  justify-content: space-between;
+  max-width: 354px;
+  margin-left: 2rem;
+}
+ .carbs, .protein{
+  padding : .9rem 0;
+  border-bottom: 1px solid var(--Light-Grey);
+}
+.calories{
+  padding-bottom: .9rem;
+  margin-top: .9rem;
+  border-bottom: 1px solid var(--Light-Grey);
+}
+.fat{
+  padding-top: .9rem;
+}
+.ingredients__h2, .instructions__h2, .nutrition__h2{
+  font-size: 1.65rem;
+}
+.ol__p{
+ margin-left: 1.5rem;
+}
